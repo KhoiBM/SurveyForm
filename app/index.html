@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>survey-form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <h1 id=title>ABCXYZ Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform
+    </p>
+    <form id="survey-form">
+        <div id="survey-form__item">
+            <label for="name" id="name-label">Name</label>
+            <br />
+            <input id="name" class="form-input" type="text" placeholder="Enter your name" required />
+        </div>
+        <div id="survey-form__item">
+            <label for="email" id="email-label">Email</label>
+            <br />
+            <input id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-input" type="email" placeholder="Enter your email" required />
+        </div>
+        <div id="survey-form__item">
+            <label for="number" id="number-label">Age<span>
+                    (optional)</span></label>
+            <br />
+            <input id="number" class="form-input" type="number" placeholder="Enter your age" min="10" max="99" required />
+        </div>
+        <div id="survey-form__item">
+            <label for="dropdown">
+                Which option best describes your current role?
+            </label>
+            <select id="dropdown" class="form-input">
+                <option disabled selected value="">Select
+                    current role</optiondisabled>
+                <option value="student">Student</option>
+                <option value="job"> Fulltime Job</option>
+                <option value="learner">Fulltime Learner</option>
+                <option value="nottosay">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div id="survey-form__item">
+            <fieldset>
+                <legend>Would you recommend ABCXYZ to a friend?</legend>
+                <label for="definitely" class="radio-container">
+                    <input id="definitely" class="radio-input" name="recommend" value="definitely" type="radio"
+                        checked />
+                    <span class="radio-container__name">Definitely</span>
+                </label>
+                <label for="maybe" class="radio-container">
+                    <input id="maybe" class="radio-input" name="recommend" value="maybe" type="radio" />
+                    <span class="radio-container__name">Maybe</span>
+                </label>
+                <label for="notsure" class="radio-container">
+                    <input id="notsure" class="radio-input" name="recommend" value="notsure" type="radio" />
+                    <span class="radio-container__name">Not sure</span>
+                </label>
+            </fieldset>
+
+        </div>
+        <div id="survey-form__item">
+            <label for="most-favorite">What is your favorite feature of
+                ABCXYZ?</label>
+            <select id="most-favorite" class="form-input">
+                <option disabled selected value="">Select an
+                    option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projecs</option>
+                <option value="community">Community</option>
+                <option value="open source">Open source</option>
+            </select>
+        </div>
+        <div id="survey-form__item">
+            <fieldset class="improved-container">
+                <legend>
+                    What would you like to see improved?
+                    <span>(Check all that apply)</span>
+                </legend>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox" class="checkbox-input" value="fontendProjects" name="improve" />
+                    Front-end Projects
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox" class="checkbox-input"  value="backendProjects" name="improve" />
+                    Back-end Projects
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox" class="checkbox-input"  value="dataVisualization" name="improve" />
+                    Data Visualization
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox" class="checkbox-input"  value="challenges" name="improve" />
+                    Challenges
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox" class="checkbox-input"  value="openSourceCommunity" name="improve" />
+                    Open Source Community
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox" class="checkbox-input"  value="gitterHelpRooms" name="improve" />
+                    Gitter help rooms
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox" class="checkbox-input"  value="videos" name="improve" />
+                    Videos
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox"class="checkbox-input"   value="cityMeetups" name="improve" />
+                    City Meetups
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox"class="checkbox-input"  value="wiki" name="improve" />
+                    Wiki
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox"class="checkbox-input"  value="forum" name="improve" />
+                    Forum
+                </label>
+                <label class="improved-container__checkbox">
+                    <input type="checkbox"class="checkbox-input"  value="additionalCourses" name="improve" />
+                    Additional
+                </label>
+            </fieldset>
+        </div>
+        <div id="survey-form__item" class="comment-container">
+            <label for="comment">Any comments or suggestions?</label>
+            <textarea id="comment" class="form-input area-input" placeholder="Enter your comment here..." rows="8" required></textarea>
+        </div>
+        <div id="survey-form__item">
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>.
+    <!-- <script src="" async defer></script> -->
+</body>
+
+</html>

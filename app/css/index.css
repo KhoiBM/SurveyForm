@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray-2: hsl(0, 0%, 20%);
+    --color-gray-3_5: hsl(0, 0%, 35%);
+    --color-dark-washed-blue: hsl(240, 90%, 70%);
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--color-dark-washed-blue, blue);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-white, white);
+}
+
+#title {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+#description {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+#survey-form {
+    width: 40vw;
+    height: auto;
+    margin: 0 auto;
+    background-color: var(--color-gray-2, gray);
+    border-radius: 1rem;
+    padding-top: 2rem;
+}
+
+#survey-form__item {
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+    /* border: 1px solid black; */
+    font-size: 1.5rem;
+}
+
+#survey-form__item:last-child {
+    padding-bottom: 3rem;
+}
+
+span {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.form-input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--color-white, white);
+    color: var(--color-gray-3_5, gray);
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.radio-container {
+    margin-top: 0;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    border: 0;
+    padding-left: 0;
+    position: relative;
+    right: 0.3rem;
+}
+
+.radio-input {
+    transform: scale(2);
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+
+.radio-container__name {
+    font-size: 1.5rem;
+    font-weight: normal;
+    position: relative;
+    top: 0.2rem;
+}
+
+.improved-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+.checkbox-input {
+    transform: scale(2);
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+
+.improved-container__checkbox {
+    margin-bottom: 1rem;
+}
+
+.survey-form__item--flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-container {
+    display: grid;
+    grid-row-gap: 1rem;
+}
+
+.area-input {
+    height: auto;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+#submit {
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--color-dark-washed-blue, blue);
+    background-color: var(--color-dark-washed-blue, blue);
+    color: var(--color-white, white);
+    font-size: 1.5rem;
+}
